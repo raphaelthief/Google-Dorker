@@ -172,7 +172,7 @@ def configurationX(ent):
             f"""    site:{ent} filetype:txt ( inurl:passwd OR inurl:htpasswd OR inurl:mdp OR inurl:pass )\n"""
             f"""    site:{ent} intitle:index.of.config\n"""
             f"""    site:{ent} inurl:robot.txt\n"""
-            f"{Fore.YELLOW}Basic infos :{Fore.GREEN}\n"
+            f"    {Fore.YELLOW}Basic infos :{Fore.GREEN}\n"
             f"""    {ent}/robots.txt\n"""
             f"""    {ent}/sitemap.xml\n"""
             f"""    {ent}/crossdomain.xml\n"""
