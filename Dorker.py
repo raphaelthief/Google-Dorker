@@ -19,7 +19,7 @@ menu = (
 def cleanit():
     os.system('cls' if os.name == 'nt' else 'clear') # Linux or Windows OS detection & compatibility
     print(menu)
-    print(f"{Fore.YELLOW}Usage : {Fore.GREEN}dorker.py [-h] [-check CHECK] [-checklist CHECKLIST] [-e ENTREPRISE] [-m MAIL] [-L] [-li] [-f] [-db] [-c] [-l] [-p] [-b] [-C] [-t]")
+    print(f"{Fore.YELLOW}Usage : {Fore.GREEN}dorker.py [-h] [-check CHECK] [-checklist CHECKLIST] [-e ENTREPRISE] [-m MAIL] [-L] [-li] [-f] [-db] [-c] [-l] [-p] [-b] [-C] [-t] [-r] [-rr]")
     print("\n------------------------------------------------------------------------------\n")
 
 def main():
@@ -39,6 +39,8 @@ def main():
     parser.add_argument("-b", "--breaks", action="store_true", help="Search for bad website config or vulnerability") # ok
     parser.add_argument("-C", "--cache", action="store_true", help="Search for cache website") # ok
     parser.add_argument("-t", "--tor", action="store_true", help="Get tor links of actual ransomwares") # ok
+    parser.add_argument("-r", "--run", action="store_true", help="Launch a Dorks search to see if there are some results aviable with timeout 5 (Danger : requests errors goes brrrrrrt !)") # ok
+    parser.add_argument("-rr", "--runverbose", action="store_true", help="Same as --run but display realtime errors (not estetic, display large errors messages") # ok
     args = parser.parse_args()
 
 
@@ -72,6 +74,14 @@ def main():
         print("--entreprise argument needed !")
         exit()
     
+    if args.run and not args.runverbose:
+        DB.startX("brrrt")
+    elif args.runverbose and not args.run:
+        DB.startX("brrrtVERBOSE")
+    elif args.runverbose and args.run:
+        print("--run and --runverbose can't be run together")
+        exit()
+
 
     ########### Start db exploit
     if args.mail: # Mails
