@@ -17,6 +17,10 @@ The operation of the API is relatively simple, you just need to convert your wor
 https://api.breachdirectory.org/passsearch?hash={sha1_hash}
 ```
 
+I have added two functions to the program that allow you to directly query to check whether or not there is a result for the different Dorks generated according to the parameters entered.
+The --run function thus allows you to see whether or not the search displays certain results and if an error occurs, a generic message will be displayed. Conversely, the --runverbose function will not display generic messages but the complete error message.
+Note that in most cases, this is a query problem. Google does not accept Boolean searches well.
+
 ## Pictures
 
 ![GoogleDORKER](https://github.com/raphaelthief/Google-Dorker/blob/main/Pictures/Help.JPG "GoogleDORKER")
