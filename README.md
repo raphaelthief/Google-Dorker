@@ -23,7 +23,7 @@ Note that in most cases, this is a query problem. Google does not accept Boolean
 
 ## Pictures
 
-![GoogleDORKER](https://github.com/raphaelthief/Google-Dorker/blob/main/Pictures/Help.JPG "GoogleDORKER")
+![GoogleDORKER](https://github.com/raphaelthief/Google-Dorker/blob/main/Pictures/HelpV2.JPG "GoogleDORKER")
 ![GoogleDORKER](https://github.com/raphaelthief/Google-Dorker/blob/main/Pictures/checklist.JPG "GoogleDORKER")
 ![GoogleDORKER](https://github.com/raphaelthief/Google-Dorker/blob/main/Pictures/api_tor.JPG "GoogleDORKER")
 ![GoogleDORKER](https://github.com/raphaelthief/Google-Dorker/blob/main/Pictures/Exemple.JPG "GoogleDORKER")
