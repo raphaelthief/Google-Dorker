@@ -17,7 +17,7 @@ def startX(datas):
         doIbrrrt = "HellYes"
     elif datas == "brrrtVERBOSE":
         doIbrrrt = "HellVerbose"
-    else:
+    elif datas == "nope":
         doIbrrrt = "HellNo"
 
 
@@ -27,10 +27,10 @@ def printitX(datas):
     dorks_lines = datas.split('\n')
     for i in range(len(dorks_lines)):
         
-        if doIbrrrt == "HellYes" or "HellVerbose":
-            Dorksearch(dorks_lines[i])
-        else:
+        if doIbrrrt == "HellNo":
             print("    " + dorks_lines[i])
+        elif doIbrrrt == "HellYes" or "HellVerbose":
+            Dorksearch(dorks_lines[i])
     
 
 ########################################### Emails dorks
