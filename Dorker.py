@@ -81,7 +81,8 @@ def main():
     elif args.runverbose and args.run:
         print("--run and --runverbose can't be run together")
         exit()
-
+    else:
+        DB.startX("nope")
 
     ########### Start db exploit
     if args.mail: # Mails
